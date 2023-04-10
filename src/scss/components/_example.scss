@@ -5,7 +5,7 @@
   width: 100%;
   max-width: 390px;
   background: var(--light-grey);
-  transition: 0.3s;
+  transition: transform 0.3s;
 
   &__link {
     display: block;
