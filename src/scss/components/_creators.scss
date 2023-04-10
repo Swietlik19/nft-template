@@ -1,0 +1,88 @@
+.creators {
+  &__wrap {
+    grid-template-columns: repeat(4, 1fr);
+    gap: 40px;
+  }
+
+  &__heading {
+    grid-column: 4 span;
+  }
+
+  &__list {
+    counter-reset: num;
+    grid-column: 4 span;
+  }
+
+  &__item {
+    position: relative;
+    grid-column: 12 span;
+
+    &::before {
+      counter-increment: num;
+      content: counter(num);
+      position: absolute;
+      left: 12px;
+      top: 13px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 20px;
+      width: 30px;
+      height: 30px;
+      font-family: var(--second-family);
+      color: var(--small-title-color);
+      background: var(--grey-color);
+    }
+
+    &:nth-child(n+6) {
+      display: none;
+    }
+  }
+
+  &__link {
+    display: flex;
+    border-radius: 20px;
+    padding: 20px;
+    background-color: var(--light-grey-color);
+    transition: background-color 0.3s;
+    gap: 20px;
+
+    &:hover {
+      background-color: var(--light-grey-color);
+    }
+  }
+
+  &__img {
+    display: block;
+    overflow: hidden;
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+  }
+
+  &__name {
+    margin: 0 0 5px;
+    font-weight: 600;
+    font-size: 22px;
+  }
+
+  &__sale {
+    margin: 0;
+    color: var(--small-title-color);
+  }
+
+  &__sum {
+    display: inline-block;
+    margin-left: 5px;
+    font-family: var(--second-family);
+    font-weight: 400;
+    color: var(--light-color);
+  }
+
+  &__btns {
+    display: flex;
+    justify-content: center;
+    order: 3;
+    grid-column: 4 span;
+  }
+}

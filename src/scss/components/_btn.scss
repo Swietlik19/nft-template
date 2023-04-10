@@ -8,6 +8,7 @@
   width: 100%;
   height: 46px;
   max-width: 315px;
+  font-weight: 600;
   transition: background-color 0.3s, color 0.3s;
   gap: 12px;
 
@@ -33,6 +34,19 @@
       .btn__icon {
         fill: var(--accent-color);
       }
+    }
+  }
+
+  &--transparent {
+    border-color: var(--accent-color);
+
+    .btn__icon {
+      fill: var(--accent-color);
+    }
+
+    &:hover {
+      color: var(--accent-color);
+      background-color: var(--light-color);
     }
   }
 
