@@ -1,0 +1,39 @@
+/* stylelint-disable alpha-value-notation */
+/* stylelint-disable color-function-notation */
+.nav {
+  position: fixed;
+  left: 0;
+  top: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  overflow: auto;
+  padding: 120px 0;
+  width: 100vw;
+  height: 100vh;
+  box-shadow: var(--light-shadow);
+  background-color: var(--grey-opacity-color);
+  transform: translateX(-120%);
+  transition: transform 0.3s;
+  gap: 30px;
+
+  &__wrap {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+  }
+
+  &__list {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+  }
+
+  &__link {
+    position: relative;
+  }
+
+  &.nav--active {
+    transform: translateX(0);
+  }
+}

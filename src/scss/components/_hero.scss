@@ -1,0 +1,13 @@
+.hero {
+  padding-top: 94px;
+  padding-bottom: 40px;
+
+  &__wrap {
+    flex-direction: column;
+  }
+
+  &__btns {
+    display: flex;
+    justify-content: center;
+  }
+}

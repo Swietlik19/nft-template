@@ -1,0 +1,12 @@
+.author {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+
+  &__img {
+    border-radius: 50%;
+    width: 24px;
+    height: 24px;
+    object-fit: cover;
+  }
+}

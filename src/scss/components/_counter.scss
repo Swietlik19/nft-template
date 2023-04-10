@@ -1,0 +1,16 @@
+.counter {
+  &__item {
+    grid-column: span 4;
+  }
+
+  &__num {
+    font-family: var(--second-family);
+    font-weight: 700;
+    font-size: 22px;
+    line-height: 1.6;
+  }
+
+  &__desc {
+    display: block;
+  }
+}

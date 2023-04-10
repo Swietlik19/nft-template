@@ -1,0 +1,44 @@
+.collections {
+  &__item {
+    grid-column: span 12;
+
+    &:not(:first-child) {
+      display: none;
+    }
+  }
+
+  &__imgs {
+    margin-bottom: 15px;
+    gap: 15px;
+  }
+
+  &__itemElement {
+    grid-column: span 4;
+    overflow: hidden;
+    border-radius: 20px;
+
+    &:first-child {
+      grid-column: span 12;
+    }
+
+    &--text {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 700;
+      text-align: center;
+      background-color: var(--accent-color);
+    }
+  }
+
+  &__img {
+    display: block;
+    width: 100%;
+  }
+
+  &__title {
+    margin: 0 0 10px;
+    font-weight: 600;
+    font-size: 22px;
+  }
+}

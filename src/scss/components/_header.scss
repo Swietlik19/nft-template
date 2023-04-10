@@ -1,0 +1,19 @@
+.header {
+  position: fixed;
+  left: 0;
+  top: 0;
+  z-index: 9999;
+  padding: 15px 0;
+  width: 100%;
+  background-color: var(--grey-color);
+  transition: 0.3s;
+
+  &__wrap {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &--fixed {
+    box-shadow: var(--light-shadow);
+  }
+}
