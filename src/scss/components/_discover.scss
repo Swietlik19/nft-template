@@ -1,0 +1,37 @@
+.discover {
+  &__wrap {
+    grid-template-columns: repeat(4, 1fr);
+    gap: 40px;
+  }
+
+  &__heading {
+    grid-column: 4 span;
+  }
+
+  &__list {
+    grid-column: 4 span;
+  }
+
+  &__item {
+    grid-column: span 12;
+  }
+
+  &__author {
+    margin-bottom: 25px;
+
+    .author__name {
+      font-family: var(--second-family);
+    }
+  }
+
+  &__content {
+    padding-bottom: 25px;
+  }
+
+  &__btns {
+    display: flex;
+    justify-content: center;
+    order: 3;
+    grid-column: 4 span;
+  }
+}

@@ -1,0 +1,21 @@
+.prices {
+  justify-content: space-between;
+
+  &__item {
+    font-family: var(--second-family);
+    font-size: 12px;
+
+    &:last-child {
+      text-align: right;
+    }
+  }
+
+  &__title {
+    margin: 0 0 5px;
+    color: var(--small-title-color);
+  }
+
+  &__sum {
+    font-weight: 400;
+  }
+}

@@ -13,6 +13,7 @@
   gap: 12px;
 
   &__icon {
+    flex-shrink: 0;
     width: 20px;
     height: 20px;
     transition: fill 0.3s;
@@ -47,6 +48,21 @@
     &:hover {
       color: var(--accent-color);
       background-color: var(--light-color);
+    }
+  }
+
+  &--white {
+    color: var(--grey-color);
+    background-color: var(--light-color);
+
+    .btn__icon {
+      fill: var(--accent-color);
+    }
+
+    &:hover {
+      border-color: var(--accent-color);
+      color: var(--light-color);
+      background-color: var(--grey-color);
     }
   }
 

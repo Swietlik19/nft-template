@@ -1,0 +1,61 @@
+/* stylelint-disable color-function-notation */
+/* stylelint-disable alpha-value-notation */
+.countdown {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  padding: 30px;
+  font-family: var(--second-family);
+  gap: 10px;
+
+  &::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    z-index: -1;
+    display: block;
+    border-radius: 20px;
+    background-color: rgba(59, 59, 59, 0.5);
+    backdrop-filter: blur(5px);
+  }
+
+  &__text {
+    display: block;
+    font-size: 12px;
+  }
+
+  &__list {
+    display: flex;
+    gap: 38px;
+  }
+
+  &__item {
+    position: relative;
+    min-width: 60px;
+
+    &:not(:last-child) {
+      &::after {
+        content: ":";
+        position: absolute;
+        right: -25px;
+        top: 0;
+        display: block;
+        font-weight: 700;
+        font-size: 28px;
+        text-transform: capitalize;
+      }
+    }
+  }
+
+  &__num {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: 700;
+    font-size: 38px;
+    line-height: 1.2;
+  }
+}

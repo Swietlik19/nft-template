@@ -1,0 +1,67 @@
+/* stylelint-disable color-function-notation */
+/* stylelint-disable alpha-value-notation */
+.cta {
+  position: relative;
+  z-index: 1;
+  background-image: url("../img/cta-bg-mobile.jpg");
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-color: #060309;
+
+  &::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    z-index: -1;
+    display: block;
+    background: linear-gradient(180deg, rgba(162, 89, 255, 0) 0%, #a259ff 100%);
+  }
+
+  &__wrap {
+    flex-direction: column;
+    justify-content: flex-end;
+    min-height: 510px;
+  }
+
+  &__content {
+    grid-template-columns: repeat(4, 1fr);
+    gap: 30px;
+  }
+
+  &__top {
+    grid-column: span 4;
+  }
+
+  &__author {
+    display: inline-flex;
+    border-radius: 20px;
+    padding: 10px 20px;
+    background: var(--light-grey-color);
+  }
+
+  &__title {
+    grid-column: span 4;
+    margin: 0;
+    font-weight: 600;
+    font-size: 38px;
+    line-height: 1.2;
+  }
+
+  &__countdown {
+    grid-column: span 4;
+  }
+
+  &__btns {
+    display: flex;
+    justify-content: center;
+    grid-column: span 4;
+  }
+
+  @media only screen and (min-device-pixel-ratio: 1.5) {
+    background-image: url("../img/cta-bg.jpg");
+  }
+}

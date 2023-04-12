@@ -3,6 +3,10 @@
   align-items: center;
   gap: 12px;
 
+  picture {
+    flex-shrink: 0;
+  }
+
   &__img {
     display: block;
     border-radius: 50%;

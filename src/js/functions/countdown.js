@@ -18,10 +18,10 @@ const getTimeRemaining = (endTime) => {
 const updateClock = (params) => {
   const timeRemains = getTimeRemaining(params.deadline);
 
-  if (params.daysSpan) params.daysSpan.innerHTML = timeRemains.days;
-  if (params.hoursSpan) params.hoursSpan.innerHTML = timeRemains.hours > 0 ? ('0' + timeRemains.hours).slice(-2) : '0';
-  if (params.minutesSpan) params.minutesSpan.innerHTML = timeRemains.minutes > 0 ? ('0' + timeRemains.minutes).slice(-2) : '0';
-  if (params.secondsSpan) params.secondsSpan.innerHTML = timeRemains.seconds > 0 ? ('0' + timeRemains.seconds).slice(-2) : '0';
+  if (params.daysSpan && timeRemains.days >= 0) params.daysSpan.innerHTML = ('0' + timeRemains.days).slice(-2);
+  if (params.hoursSpan && timeRemains.hours >= 0) params.hoursSpan.innerHTML = ('0' + timeRemains.hours).slice(-2);
+  if (params.minutesSpan && timeRemains.minutes >= 0) params.minutesSpan.innerHTML = ('0' + timeRemains.minutes).slice(-2);
+  if (params.secondsSpan && timeRemains.seconds >= 0) params.secondsSpan.innerHTML = ('0' + timeRemains.seconds).slice(-2);
 
   return timeRemains.total;
 }
