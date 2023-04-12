@@ -1,5 +1,6 @@
 import { burger } from './functions/burger';
 import { counter } from './functions/counter';
+import { countdown } from './functions/countdown';
 import Swiper, { Navigation, Pagination } from 'swiper';
 
 // Swiper initialization
