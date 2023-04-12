@@ -1,0 +1,34 @@
+<section class="section subscribe">
+  <div class="container">
+
+    <div class="subscribe__wrap">
+      <picture>
+        <source srcset="img/subscribe@2x.webp 2x, img/subscribe.webp 1x" type="image/webp" media="(min-width: 768px)">
+        <source srcset="img/subscribe@2x.jpg 2x, img/subscribe.jpg 1x" type="image/jpeg" media="(min-width: 768px)">
+        <source srcset="img/subscribe-mobile@2x.webp 2x, img/subscribe-mobile.webp 1x" type="image/webp">
+        <source srcset="img/subscribe-mobile@2x.jpg 2x, img/subscribe-mobile.jpg 1x" type="image/jpeg">
+        <img loading="lazy" src="subscribe.jpg" class="subscribe__img" width="315" height="255" alt="A man in a spacesuit reading a newspaper">
+      </picture>
+
+      <div class="subscribe__content">
+        <div class="page-heading">
+          <h2 class="page-title">Join our weekly digest</h2>
+          <p class="page-desc">Get exclusive promotions &amp;&nbsp;updates straight to&nbsp;your inbox.</p>
+        </div>
+
+        <form action="#" class="form subscribe__form">
+          <label>
+            <input class="input-reset form__input" type="email" id="email" name="email" placeholder="Enter Your Email Address" required>
+          </label>
+
+          <button class="btn-reset btn btn--accent" type="submit">
+            <svg class="btn__icon">
+              <use xlink:href="img/sprite.svg#envelope"></use>
+            </svg>
+            Subscribe
+          </button>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>

@@ -1,0 +1,28 @@
+.how-works {
+  &__item {
+    display: flex;
+    align-items: center;
+    grid-column: span 12;
+    border-radius: 20px;
+    padding: 20px;
+    background-color: var(--light-grey-color);
+    gap: 20px;
+  }
+
+  &__img {
+    display: block;
+    flex-shrink: 0;
+    width: 36.4%;
+    object-fit: contain;
+  }
+
+  &__title {
+    margin: 0 0 10px;
+    font-weight: 600;
+    font-size: 16px;
+  }
+
+  &__desc {
+    font-size: 12px;
+  }
+}

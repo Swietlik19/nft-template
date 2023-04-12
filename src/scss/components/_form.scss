@@ -1,0 +1,20 @@
+/* stylelint-disable scss/no-global-function-names */
+.form {
+  &__input {
+    @include placeholder(var(--grey-color));
+
+    margin-bottom: 16px;
+    border: 1px solid var(--small-title-color);
+    border-radius: 20px;
+    padding: 0 20px;
+    width: 100%;
+    height: 46px;
+    max-width: 420px;
+    color: var(--grey-color);
+    transition: background-color 0.3s;
+
+    &:hover {
+      background-color: lighten(#a259ff, 25%);
+    }
+  }
+}

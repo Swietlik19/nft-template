@@ -1,0 +1,23 @@
+/* stylelint-disable color-function-notation */
+/* stylelint-disable alpha-value-notation */
+.socials {
+  display: flex;
+  gap: 10px;
+
+  &__link {
+    display: inline-block;
+
+    &:hover {
+      .socials__icon {
+        fill: var(--accent-color);
+      }
+    }
+  }
+
+  &__icon {
+    width: 32px;
+    height: 32px;
+    fill: var(--small-title-color);
+    transition: fill 0.3s;
+  }
+}

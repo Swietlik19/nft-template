@@ -1,0 +1,58 @@
+/* stylelint-disable scss/no-global-function-names */
+.footer {
+  &__top {
+    display: flex;
+    flex-direction: column;
+    padding: 40px 0 30px;
+    gap: 30px;
+  }
+
+  &__col {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  &__bottom {
+    border-top: 1px solid var(--small-title-color);
+    padding: 20px 0 40px;
+  }
+
+  &__text {
+    margin: 0;
+    color: #ccc;
+
+    &--margined {
+      margin-bottom: 15px;
+    }
+  }
+
+  &__copywright {
+    margin: 0;
+    font-size: 12px;
+    color: #ccc;
+  }
+
+  &__title {
+    margin: 0;
+    font-family: var(--second-family);
+    font-weight: 700;
+    font-size: 22px;
+    line-height: 1.6;
+  }
+
+  &__menu {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  &__menuLink {
+    color: #ccc;
+    transition: color 0.3s;
+
+    &:hover {
+      color: lighten(#a259ff, 20%);
+    }
+  }
+}
