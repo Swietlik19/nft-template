@@ -3,7 +3,11 @@
 .cta {
   position: relative;
   z-index: 1;
-  background-image: url("../img/cta-bg-mobile.jpg");
+  background-image:
+    image-set(
+      url("../img/cta-bg-mobile.jpg") 1x,
+      url("../img/cta-bg.jpg") 2x
+    );
   background-position: center center;
   background-size: cover;
   background-repeat: no-repeat;
@@ -59,9 +63,5 @@
     display: flex;
     justify-content: center;
     grid-column: span 4;
-  }
-
-  @media only screen and (min-device-pixel-ratio: 1.5) {
-    background-image: url("../img/cta-bg.jpg");
   }
 }
