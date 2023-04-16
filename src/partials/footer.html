@@ -1,12 +1,10 @@
 <footer class="footer">
   <div class="container">
-    <div class="footer__top">
+    <div class="footer__top grid">
       <div class="footer__col">
         <a class="logo footer__logo">
           <img loading="lazy" src="img/logo.svg" alt="logo" />
         </a>
-
-        <p class="footer__text">NFT marketplace&nbsp;UI created with Anima for Figma.</p>
 
         <div class="footer__contacts">
           <p class="footer__text footer__text--margined">Join our community</p>
@@ -63,21 +61,23 @@
       </div>
 
       <div class="footer__col">
-        <h3 class="footer__title">Join our weekly digest</h3>
+        <h3 class="footer__title footer__title--capitalized">Join our weekly digest</h3>
 
         <p class="footer__text">Get exclusive promotions &amp;&nbsp;updates straight to&nbsp;your inbox.</p>
 
         <form action="#" class="form footer__form">
-          <label>
-            <input class="input-reset form__input" type="email" id="email" name="email" placeholder="Enter Your Email Address" required>
-          </label>
+          <div class="form__wrap form__wrap--tablet">
+            <label class="form__label">
+              <input class="input-reset form__input" type="email" id="email" name="email" placeholder="Enter your email here" required>
+            </label>
 
-          <button class="btn-reset btn btn--accent" type="submit">
-            <svg class="btn__icon">
-              <use xlink:href="img/sprite.svg#envelope"></use>
-            </svg>
-            Subscribe
-          </button>
+            <button class="btn-reset btn btn--accent footer__btn" type="submit">
+              <svg class="btn__icon">
+                <use xlink:href="img/sprite.svg#envelope"></use>
+              </svg>
+              Subscribe
+            </button>
+          </div>
         </form>
       </div>
     </div>

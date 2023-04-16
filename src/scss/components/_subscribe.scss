@@ -4,6 +4,24 @@
     flex-direction: column;
     align-items: center;
     gap: 30px;
+
+    picture {
+      @include tablet {
+        width: 50%;
+      }
+    }
+
+    @include tablet {
+      flex-direction: row;
+      border-radius: 20px;
+      padding: 40px 30px;
+      background: var(--light-grey-color);
+    }
+
+    @include desktop {
+      padding: 60px;
+      gap: 80px;
+    }
   }
 
   &__img {
@@ -11,5 +29,29 @@
     border-radius: 20px;
     width: 100%;
     max-width: 390px;
+
+    @include tablet {
+      max-width: 100%;
+    }
+  }
+
+  &__content {
+    width: 100%;
+
+    @include tablet {
+      width: 50%;
+    }
+  }
+
+  &__btn {
+    @include desktop {
+      margin-left: -214px;
+      width: 214px;
+    }
+  }
+
+  @include tablet {
+    padding-top: 40px;
+    padding-bottom: 80px;
   }
 }

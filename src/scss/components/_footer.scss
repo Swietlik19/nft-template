@@ -1,16 +1,46 @@
 /* stylelint-disable scss/no-global-function-names */
 .footer {
+  background-color: var(--light-grey-color);
+
   &__top {
-    display: flex;
-    flex-direction: column;
+    grid-template-columns: repeat(6, 1fr);
     padding: 40px 0 30px;
     gap: 30px;
+
+    @include desktop {
+      grid-template-columns: repeat(12, 1fr);
+    }
   }
 
   &__col {
     display: flex;
     flex-direction: column;
+    grid-column: span 6;
     gap: 20px;
+
+    @include desktop {
+      &:first-child {
+        grid-column: span 4;
+      }
+
+      &:last-child {
+        grid-column: span 6;
+      }
+
+      &:nth-child(2) {
+        grid-column: span 2;
+      }
+    }
+
+    @include big-desktop {
+      &:last-child {
+        grid-column: span 5;
+      }
+
+      &:nth-child(2) {
+        grid-column: span 3;
+      }
+    }
   }
 
   &__bottom {
@@ -24,6 +54,10 @@
 
     &--margined {
       margin-bottom: 15px;
+    }
+
+    @include desktop {
+      max-width: 330px;
     }
   }
 
@@ -39,6 +73,10 @@
     font-weight: 700;
     font-size: 22px;
     line-height: 1.6;
+
+    &--capitalized {
+      text-transform: capitalize;
+    }
   }
 
   &__menu {
@@ -53,6 +91,17 @@
 
     &:hover {
       color: lighten(#a259ff, 20%);
+    }
+  }
+
+  &__btn {
+    @include tablet {
+      margin-left: -179px;
+      width: 179px;
+
+      .btn__icon {
+        display: none;
+      }
     }
   }
 }

@@ -3,6 +3,14 @@
 .categories {
   &__item {
     grid-column: span 6;
+
+    @include big-mobile {
+      grid-column: span 4;
+    }
+
+    @include tablet {
+      grid-column: span 3;
+    }
   }
 
   &__link {
@@ -61,6 +69,11 @@
     width: 80px;
     height: 80px;
     transition: transform 0.3s, opacity 0.3s;
+
+    @include desktop {
+      width: 100px;
+      height: 100px;
+    }
   }
 
   &__title {
@@ -69,5 +82,9 @@
     font-weight: 600;
     font-size: 16px;
     line-height: 1.4;
+
+    @include desktop {
+      font-size: 22px;
+    }
   }
 }

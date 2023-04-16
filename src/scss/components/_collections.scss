@@ -7,6 +7,11 @@
     }
   }
 
+  &__wrap {
+    margin: 0 auto;
+    max-width: 390px;
+  }
+
   &__imgs {
     margin-bottom: 15px;
     gap: 15px;

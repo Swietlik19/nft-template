@@ -13,6 +13,8 @@
   }
 
   &__item {
+    display: flex;
+    justify-content: center;
     grid-column: span 12;
   }
 

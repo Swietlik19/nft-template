@@ -7,6 +7,16 @@
     padding: 20px;
     background-color: var(--light-grey-color);
     gap: 20px;
+
+    @include tablet {
+      flex-direction: column;
+      grid-column: span 4;
+      text-align: center;
+    }
+
+    @include desktop {
+      padding: 10px 30px 30px;
+    }
   }
 
   &__img {
@@ -14,15 +24,31 @@
     flex-shrink: 0;
     width: 36.4%;
     object-fit: contain;
+
+    @include tablet {
+      width: 133px;
+    }
+
+    @include desktop {
+      width: 250px;
+    }
   }
 
   &__title {
     margin: 0 0 10px;
     font-weight: 600;
     font-size: 16px;
+
+    @include desktop {
+      font-size: 22px;
+    }
   }
 
   &__desc {
     font-size: 12px;
+
+    @include desktop {
+      font-size: 16px;
+    }
   }
 }

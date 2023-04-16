@@ -12,13 +12,13 @@
   }
 }
 
-@mixin big-tablet {
+@mixin tablet {
   @media (min-width: (768px)) {
     @content;
   }
 }
 
-@mixin tablet {
+@mixin big-mobile {
   @media (min-width: (576px)) {
     @content;
   }

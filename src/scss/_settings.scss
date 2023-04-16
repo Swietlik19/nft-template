@@ -106,6 +106,10 @@ a {
   display: grid;
   grid-template-columns: repeat(12, 1fr);
   gap: 20px;
+
+  @include tablet {
+    gap: 30px;
+  }
 }
 
 .flex {
@@ -119,6 +123,10 @@ a {
 
 .section {
   padding: 40px 0;
+
+  @include desktop {
+    padding: 80px 0;
+  }
 }
 
 .page-heading {
@@ -130,8 +138,22 @@ a {
   font-weight: 600;
   font-size: 28px;
   line-height: 1.4;
+
+  &--capitalized {
+    text-transform: capitalize;
+  }
+
+  @include desktop {
+    font-size: 38px;
+    line-height: 1.2;
+  }
 }
 
 .page-desc {
   margin: 0;
+
+  @include desktop {
+    font-size: 22px;
+    line-height: 1.6;
+  }
 }

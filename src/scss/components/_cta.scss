@@ -6,7 +6,7 @@
   background-image:
     image-set(
       url("../img/cta-bg-mobile.jpg") 1x,
-      url("../img/cta-bg.jpg") 2x
+      url("../img/cta-bg-tablet.jpg") 2x
     );
   background-position: center center;
   background-size: cover;
@@ -29,15 +29,22 @@
     flex-direction: column;
     justify-content: flex-end;
     min-height: 510px;
+
+    @include tablet {
+      min-height: 520px;
+      gap: 30px;
+    }
   }
 
   &__content {
-    grid-template-columns: repeat(4, 1fr);
+    display: flex;
+    flex-direction: column;
     gap: 30px;
-  }
 
-  &__top {
-    grid-column: span 4;
+    @include tablet {
+      flex-direction: row;
+      align-items: flex-end;
+    }
   }
 
   &__author {
@@ -53,15 +60,60 @@
     font-weight: 600;
     font-size: 38px;
     line-height: 1.2;
+
+    @include tablet {
+      margin-bottom: 30px;
+    }
+
+    @include desktop {
+      font-size: 51px;
+    }
   }
 
   &__countdown {
     grid-column: span 4;
+    margin: 0 auto;
+    max-width: 390px;
   }
 
   &__btns {
     display: flex;
     justify-content: center;
-    grid-column: span 4;
+
+    &--desktop {
+      display: none;
+
+      @include tablet {
+        display: flex;
+      }
+    }
+
+    &--mobile {
+      @include tablet {
+        display: none;
+      }
+    }
+
+    @include tablet {
+      justify-content: flex-start;
+
+      .btn {
+        width: auto;
+        min-width: 198px;
+      }
+    }
+  }
+
+  @include tablet {
+    padding: 60px 0;
+    background-image:
+      image-set(
+        url("../img/cta-bg-tablet.jpg") 1x,
+        url("../img/cta-bg-tablet@2x.jpg") 2x
+      );
+  }
+
+  @include desktop {
+    background-image: url("../img/cta-bg.jpg");
   }
 }
