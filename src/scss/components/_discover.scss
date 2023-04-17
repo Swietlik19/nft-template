@@ -2,20 +2,50 @@
   &__wrap {
     grid-template-columns: repeat(4, 1fr);
     gap: 40px;
+
+    @include tablet {
+      grid-template-columns: repeat(12, 1fr);
+    }
   }
 
   &__heading {
-    grid-column: 4 span;
+    grid-column: span 4;
+
+    @include tablet {
+      grid-column: span 8;
+    }
   }
 
   &__list {
-    grid-column: 4 span;
+    grid-column: span 4;
+
+    @include tablet {
+      grid-column: span 12;
+    }
   }
 
   &__item {
     display: flex;
     justify-content: center;
     grid-column: span 12;
+
+    &:nth-child(3) {
+      @include tablet {
+        display: none;
+      }
+
+      @include desktop {
+        display: flex;
+      }
+    }
+
+    @include tablet {
+      grid-column: span 6;
+    }
+
+    @include desktop {
+      grid-column: span 4;
+    }
   }
 
   &__author {
@@ -34,6 +64,16 @@
     display: flex;
     justify-content: center;
     order: 3;
-    grid-column: 4 span;
+    grid-column: span 4;
+
+    @include tablet {
+      align-self: flex-end;
+      justify-content: flex-end;
+      order: 0;
+
+      .btn {
+        width: auto;
+      }
+    }
   }
 }

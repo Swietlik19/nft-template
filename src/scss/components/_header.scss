@@ -10,10 +10,32 @@
 
   &__wrap {
     display: flex;
-    justify-content: space-between;
+
+    @include desktop {
+      align-items: center;
+    }
+  }
+
+  &__btn {
+    @include desktop {
+      padding: 0 30px;
+      width: auto;
+    }
+  }
+
+  &__burger {
+    margin-left: auto;
+
+    @include desktop {
+      display: none;
+    }
   }
 
   &--fixed {
     box-shadow: var(--light-shadow);
+  }
+
+  @include desktop {
+    padding: 20px 0;
   }
 }

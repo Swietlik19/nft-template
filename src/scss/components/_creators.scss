@@ -2,20 +2,33 @@
   &__wrap {
     grid-template-columns: repeat(4, 1fr);
     gap: 40px;
+
+    @include tablet {
+      grid-template-columns: repeat(12, 1fr);
+    }
   }
 
   &__heading {
-    grid-column: 4 span;
+    grid-column: span 4;
+
+    @include tablet {
+      grid-column: span 6;
+    }
   }
 
   &__list {
     counter-reset: num;
-    grid-column: 4 span;
+    grid-column: span 4;
+
+    @include tablet {
+      grid-column: span 12;
+    }
   }
 
   &__item {
     position: relative;
-    grid-column: 12 span;
+    display: none;
+    grid-column: span 12;
 
     &::before {
       counter-increment: num;
@@ -34,8 +47,23 @@
       background: var(--grey-color);
     }
 
-    &:nth-child(n+6) {
-      display: none;
+    &:nth-child(-n + 5) {
+      display: block;
+    }
+
+    &:nth-child(-n + 6) {
+      @include tablet {
+        display: block;
+      }
+    }
+
+    @include tablet {
+      grid-column: span 6;
+    }
+
+    @include desktop {
+      display: block;
+      grid-column: span 3;
     }
   }
 
@@ -50,6 +78,11 @@
     &:hover {
       background-color: var(--grey-color);
     }
+
+    @include desktop {
+      flex-direction: column;
+      align-items: center;
+    }
   }
 
   &__img {
@@ -58,6 +91,17 @@
     border-radius: 50%;
     width: 60px;
     height: 60px;
+
+    @include desktop {
+      width: 120px;
+      height: 120px;
+    }
+  }
+
+  &__info {
+    @include desktop {
+      text-align: center;
+    }
   }
 
   &__name {
@@ -77,12 +121,27 @@
     font-family: var(--second-family);
     font-weight: 400;
     color: var(--light-color);
+
+    @include desktop {
+      text-align: center;
+    }
   }
 
   &__btns {
     display: flex;
     justify-content: center;
     order: 3;
-    grid-column: 4 span;
+    grid-column: span 4;
+
+    @include tablet {
+      align-self: flex-end;
+      justify-content: flex-end;
+      order: 0;
+      grid-column: span 6;
+
+      .btn {
+        width: auto;
+      }
+    }
   }
 }

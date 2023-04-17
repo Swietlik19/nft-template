@@ -8,9 +8,18 @@
     font-weight: 700;
     font-size: 22px;
     line-height: 1.6;
+
+    @include desktop {
+      font-size: 28px;
+      line-height: 1.4;
+    }
   }
 
   &__desc {
     display: block;
+
+    @include desktop {
+      font-size: 24px;
+    }
   }
 }

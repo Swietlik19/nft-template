@@ -40,10 +40,16 @@ counters.forEach((counter) => {
   let stepTime = Math.abs(Math.floor(duration / (end / step)));
   let isDone = false;
 
-  vars.windowEl.addEventListener("scroll", function() {
-    if (isElementInViewport(counter) && !isDone) {
-      isDone = true;
-      animateValue(counter, end, step, additionalText, duration, stepTime);
+  vars.windowEl.addEventListener("load", function() {
+    const handleScrollEvent = () => {
+      if (isElementInViewport(counter) && !isDone) {
+        isDone = true;
+        animateValue(counter, end, step, additionalText, duration, stepTime);
+      }
     }
+
+    window.addEventListener("scroll", handleScrollEvent);
+    handleScrollEvent();
   });
+
 });

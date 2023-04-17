@@ -1,9 +1,25 @@
 .collections {
   &__item {
+    display: none;
     grid-column: span 12;
 
-    &:not(:first-child) {
-      display: none;
+    &:first-child {
+      display: block;
+    }
+
+    &:nth-child(2) {
+      @include tablet {
+        display: block;
+      }
+    }
+
+    @include tablet {
+      grid-column: span 6;
+    }
+
+    @include desktop {
+      display: block;
+      grid-column: span 4;
     }
   }
 
@@ -30,9 +46,15 @@
       display: flex;
       align-items: center;
       justify-content: center;
+      font-family: var(--second-family);
       font-weight: 700;
+      word-break: break-all;
       text-align: center;
       background-color: var(--accent-color);
+
+      @include tablet {
+        font-size: 22px;
+      }
     }
   }
 

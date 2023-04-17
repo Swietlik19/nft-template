@@ -2,4 +2,9 @@
   display: block;
   width: 183px;
   height: 24px;
+
+  @include desktop {
+    width: 243px;
+    height: 32px;
+  }
 }

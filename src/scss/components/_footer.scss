@@ -43,9 +43,9 @@
     }
   }
 
-  &__bottom {
-    border-top: 1px solid var(--small-title-color);
-    padding: 20px 0 40px;
+  &__logo {
+    width: 243px;
+    height: 32px;
   }
 
   &__text {
@@ -103,5 +103,10 @@
         display: none;
       }
     }
+  }
+
+  &__bottom {
+    border-top: 1px solid var(--small-title-color);
+    padding: 20px 0 40px;
   }
 }
