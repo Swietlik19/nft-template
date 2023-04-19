@@ -1,5 +1,6 @@
 /node_modules
 /app
+/_files
 package-lock.json
 /.vscode
 /src/js/_functions.js
